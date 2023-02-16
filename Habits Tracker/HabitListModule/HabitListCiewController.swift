@@ -59,7 +59,7 @@ final class HabitListViewController: UITableViewController {
     }
     
     @objc private func showSettings() {
-        
+        print("settings")
     }
 }
 //MARK: - HabitListViewProtocol

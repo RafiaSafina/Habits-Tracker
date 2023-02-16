@@ -18,4 +18,5 @@ struct ConstantText {
     static let habit = "Habit"
     static let tamagochi = "Tamagochi"
     static let habitTitle = "Habits"
+    static let newHabitTitle = "New habit"
 }

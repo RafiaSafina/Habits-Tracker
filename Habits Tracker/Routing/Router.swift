@@ -20,6 +20,7 @@ protocol RouterProtocol: RouterMain {
     func setupTabBarController()
     func showTamagochi()
     func showHabit()
+    func backToRoot()
 }
 
 class Router: RouterProtocol {
@@ -73,13 +74,22 @@ class Router: RouterProtocol {
     }
     
     func showTamagochi() {
-        let tanagochiVC = builder.createTamagochiViewController(storageManager: storageManager, router: self)
-        rootViewController?.pushViewController(tanagochiVC, animated: true)
+        let tamagochiVC = builder.createTamagochiViewController(storageManager: storageManager, router: self)
+        rootViewController?.pushViewController(tamagochiVC, animated: true)
     }
     
     func showHabit() {
-        let habitVC = builder.createHabitViewController(storageManager: storageManager, router: self)
-        rootViewController?.pushViewController(habitVC, animated: true)
+        let habitVC = UINavigationController(rootViewController: builder.createHabitViewController(
+            storageManager: storageManager,
+            router: self))
+        habitVC.modalPresentationStyle = .pageSheet
+        rootViewController?.present(habitVC, animated: true)
+    }
+    
+    func backToRoot() {
+        if let rootViewController = rootViewController {
+            rootViewController.presentedViewController?.dismiss(animated: true)
+        }
     }
     
     private func generate(viewController: UIViewController, imageString: String, title: String) -> UIViewController {
