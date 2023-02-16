@@ -13,7 +13,6 @@ final class TamagochiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
     }
     
     init(presenter: TamagochiPresenter) {

@@ -12,7 +12,8 @@ protocol RouterMain {
     var habitListViewController: UITableViewController? { get set }
     var tamagochiViewController: UIViewController? { get set }
     var habitViewController: UIViewController? { get set }
-    var tabBarController: TabBarController? { get set }
+    var tabBarController: CustomTabBarController? { get set }
+    var navigationController: UINavigationController? { get set }
 }
 
 protocol RouterProtocol: RouterMain {
@@ -29,7 +30,8 @@ class Router: RouterProtocol {
     var habitListViewController: UITableViewController?
     var tamagochiViewController: UIViewController?
     var habitViewController: UIViewController?
-    var tabBarController: TabBarController?
+    var tabBarController: CustomTabBarController?
+    var navigationController: UINavigationController?
     
     lazy private var storageManager: StorageManagerProtocol = StorageManager()
     
@@ -37,7 +39,7 @@ class Router: RouterProtocol {
          habitListViewController: UITableViewController,
          tamagochiViewController: UIViewController,
          habitViewController: UIViewController,
-         tabBarController: TabBarController,
+         tabBarController: CustomTabBarController,
          builder: BuilderProtocol) {
         
         self.rootViewController = rootViewController
@@ -49,20 +51,25 @@ class Router: RouterProtocol {
     }
     
     func setupTabBarController() {
-        let habitsVC = builder.createHabitsViewController(storageManager: storageManager, router: self)
-        let tamagichiVC = builder.createTamagochiViewController(storageManager: storageManager, router: self)
+        let habitListVC = UINavigationController(
+            rootViewController: builder.createHabitsViewController(
+                storageManager: storageManager,
+                router: self))
+        let tamagochiVC = UINavigationController(
+            rootViewController: builder.createTamagochiViewController(
+                storageManager: storageManager,
+                router: self))
         
         tabBarController?.setViewControllers([
             generate(
-                viewController: habitsVC,
+                viewController: habitListVC,
                 imageString: ConstantImage.habit,
                 title: ConstantText.habit),
             generate(
-                viewController: tamagichiVC,
+                viewController: tamagochiVC,
                 imageString: ConstantImage.tamagochi,
                 title: ConstantText.tamagochi
             )], animated: true)
-        
     }
     
     func showTamagochi() {
@@ -77,7 +84,7 @@ class Router: RouterProtocol {
     
     private func generate(viewController: UIViewController, imageString: String, title: String) -> UIViewController {
         viewController.title = title
-        viewController.tabBarItem.image = UIImage(named: imageString)
+        viewController.tabBarItem = UITabBarItem(title: title, image: UIImage(named: imageString), selectedImage: UIImage(named: imageString))
         
         return viewController
     }

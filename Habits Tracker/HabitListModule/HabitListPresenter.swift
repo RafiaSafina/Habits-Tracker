@@ -12,7 +12,7 @@ protocol HabitListViewProtocol: AnyObject {
 }
 
 protocol HabitListPresenterProtocol: AnyObject {
-    
+    func addHabit()
 }
 
 final class HabitListPresenter: HabitListPresenterProtocol {
@@ -23,5 +23,9 @@ final class HabitListPresenter: HabitListPresenterProtocol {
     init(router: RouterProtocol, storageManager: StorageManagerProtocol) {
         self.router = router
         self.storageManager = storageManager
+    }
+    
+    func addHabit() {
+        router?.showHabit()
     }
 }

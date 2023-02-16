@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         let builder: BuilderProtocol = Builder()
-        let tabBarController = TabBarController()
+        let tabBarController = CustomTabBarController() 
         let rootViewController = UINavigationController(rootViewController: tabBarController)
         let habitListViewController = UITableViewController()
         let tamagochiViewController = UIViewController()
