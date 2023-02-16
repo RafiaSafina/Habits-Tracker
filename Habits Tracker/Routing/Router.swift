@@ -65,11 +65,11 @@ class Router: RouterProtocol {
             generate(
                 viewController: habitListVC,
                 imageString: ConstantImage.habit,
-                title: ConstantText.habit),
+                title: ConstantString.habit),
             generate(
                 viewController: tamagochiVC,
                 imageString: ConstantImage.tamagochi,
-                title: ConstantText.tamagochi
+                title: ConstantString.tamagochi
             )], animated: true)
     }
     

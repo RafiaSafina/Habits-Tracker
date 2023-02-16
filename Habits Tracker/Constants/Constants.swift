@@ -6,7 +6,11 @@
 //
 
 import Foundation
-
+ 
+struct Numbs {
+    static let habitSections = 3
+    static let habitRows = 1
+}
 struct ConstantImage {
     static let habit = "list"
     static let tamagochi = "cat"
@@ -14,9 +18,16 @@ struct ConstantImage {
     static let add = "add"
 }
 
-struct ConstantText {
+struct ConstantString {
     static let habit = "Habit"
     static let tamagochi = "Tamagochi"
     static let habitTitle = "Habits"
     static let newHabitTitle = "New habit"
+    static let habitCellID = "HabitCellID"
+}
+
+struct HabitSectionsTitles{
+    static let habitName = "Name"
+    static let frequency = "Frequncy"
+    static let color = "Color"
 }

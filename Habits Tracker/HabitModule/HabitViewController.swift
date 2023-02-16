@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HabitViewController: UIViewController {
+class HabitViewController: UITableViewController {
 
     private let presenter: HabitPresenter
     
@@ -27,7 +27,7 @@ class HabitViewController: UIViewController {
     }
     
     private func setupNavBar() {
-        title = ConstantText.newHabitTitle
+        title = ConstantString.newHabitTitle
         
         let navBarApperance = UINavigationBarAppearance()
         navBarApperance.configureWithOpaqueBackground()
@@ -56,6 +56,35 @@ class HabitViewController: UIViewController {
     
 }
 
+//MARK: - TableViewDataSource
+extension HabitViewController {
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        Numbs.habitSections
+//    }
+//    
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        switch section {
+//        case 0:
+//            return HabitSectionsTitles.habitName
+//        case 1:
+//            return HabitSectionsTitles.frequency
+//        case 2:
+//            return HabitSectionsTitles.color
+//        default:
+//            return ""
+//        }
+//    }
+    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        return UITableViewCell
+//    }
+//    
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        Numbs.habitRows
+//    }
+}
+
+//MARK: - HabitViewProtocol
 extension HabitViewController: HabitViewProtocol {
     
 }

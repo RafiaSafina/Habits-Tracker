@@ -27,7 +27,7 @@ final class HabitListViewController: UITableViewController {
     }
     
     private func setupNavigationBar() {
-        title = ConstantText.habitTitle
+        title = ConstantString.habitTitle
         
         let navBarApperance = UINavigationBarAppearance()
         navBarApperance.configureWithOpaqueBackground()
