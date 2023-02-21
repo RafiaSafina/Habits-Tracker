@@ -7,12 +7,14 @@
 
 import UIKit
 
-class CustomTabBarController: UITabBarController {
+class HomeTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appearance = UITabBarItem.appearance(whenContainedInInstancesOf: [CustomTabBarController.self])
+        let appearance = UITabBarItem.appearance(whenContainedInInstancesOf: [HomeTabBarController.self])
         appearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
         appearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .selected)
         }
-    }
+}
+
+

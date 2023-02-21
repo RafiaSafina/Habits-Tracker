@@ -37,21 +37,22 @@ final class HabitListViewController: UITableViewController {
         navigationController?.navigationBar.standardAppearance = navBarApperance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarApperance
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
+        let addBUtton = UIBarButtonItem(
             image: UIImage(named: ConstantImage.add),
             style: .done,
             target: self,
             action: #selector(addNewHabit))
-        
-       
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
+        let settingsButton = UIBarButtonItem(
             image: UIImage(named: ConstantImage.settingGear),
             style: .plain,
             target: self,
             action: #selector(showSettings))
         
-        navigationItem.rightBarButtonItem?.tintColor = .red
-        navigationItem.leftBarButtonItem?.tintColor = .red
+        navigationItem.rightBarButtonItem = addBUtton
+        navigationItem.leftBarButtonItem = settingsButton
+        
+        addBUtton.tintColor = .red
+        settingsButton.tintColor = .red
     }
     
     @objc private func addNewHabit() {

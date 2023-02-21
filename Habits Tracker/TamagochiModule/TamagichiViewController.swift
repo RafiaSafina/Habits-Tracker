@@ -9,10 +9,11 @@ import UIKit
 
 final class TamagochiViewController: UIViewController {
     
-    let presenter: TamagochiPresenter
+    private let presenter: TamagochiPresenter
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
     }
     
     init(presenter: TamagochiPresenter) {

@@ -14,6 +14,8 @@ protocol BuilderProtocol {
     func createTamagochiViewController(storageManager: StorageManagerProtocol, router: RouterProtocol) -> UIViewController
     
     func createHabitViewController(storageManager: StorageManagerProtocol, router: RouterProtocol) -> UIViewController
+    
+    func createProgressionViewController(storageManager: StorageManagerProtocol, router: RouterProtocol) -> UIViewController
 }
 
 struct Builder: BuilderProtocol {
@@ -38,5 +40,10 @@ struct Builder: BuilderProtocol {
         return view
     }
     
-    
+    func createProgressionViewController(storageManager: StorageManagerProtocol, router: RouterProtocol) -> UIViewController {
+        let presenter = ProgressionPresenter(router: router, storageManager: storageManager)
+        let view = ProgressionViewController(presenter: presenter)
+        
+        return view
+    }
 }

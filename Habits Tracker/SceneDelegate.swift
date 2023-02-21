@@ -18,16 +18,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         let builder: BuilderProtocol = Builder()
-        let tabBarController = CustomTabBarController() 
+        let tabBarController = HomeTabBarController() 
         let rootViewController = UINavigationController(rootViewController: tabBarController)
         let habitListViewController = UITableViewController()
         let tamagochiViewController = UIViewController()
         let habitViewController = UIViewController()
+        let calendatViewController = UIViewController()
         
         let router = Router(rootViewController: rootViewController,
                             habitListViewController: habitListViewController,
                             tamagochiViewController: tamagochiViewController,
                             habitViewController: habitViewController,
+                            calendarViewController: calendatViewController,
                             tabBarController: tabBarController,
                             builder: builder)
         router.setupTabBarController()

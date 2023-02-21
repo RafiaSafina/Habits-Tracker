@@ -12,7 +12,8 @@ protocol RouterMain {
     var habitListViewController: UITableViewController? { get set }
     var tamagochiViewController: UIViewController? { get set }
     var habitViewController: UIViewController? { get set }
-    var tabBarController: CustomTabBarController? { get set }
+    var calendarViewController: UIViewController? { get set }
+    var tabBarController: HomeTabBarController? { get set }
     var navigationController: UINavigationController? { get set }
 }
 
@@ -31,7 +32,8 @@ class Router: RouterProtocol {
     var habitListViewController: UITableViewController?
     var tamagochiViewController: UIViewController?
     var habitViewController: UIViewController?
-    var tabBarController: CustomTabBarController?
+    var calendarViewController: UIViewController?
+    var tabBarController: HomeTabBarController?
     var navigationController: UINavigationController?
     
     lazy private var storageManager: StorageManagerProtocol = StorageManager()
@@ -40,13 +42,15 @@ class Router: RouterProtocol {
          habitListViewController: UITableViewController,
          tamagochiViewController: UIViewController,
          habitViewController: UIViewController,
-         tabBarController: CustomTabBarController,
+         calendarViewController: UIViewController,
+         tabBarController: HomeTabBarController,
          builder: BuilderProtocol) {
         
         self.rootViewController = rootViewController
         self.habitListViewController = habitListViewController
         self.tamagochiViewController = tamagochiViewController
         self.habitViewController = habitViewController
+        self.calendarViewController = calendarViewController
         self.tabBarController = tabBarController
         self.builder = builder
     }
@@ -54,6 +58,10 @@ class Router: RouterProtocol {
     func setupTabBarController() {
         let habitListVC = UINavigationController(
             rootViewController: builder.createHabitsViewController(
+                storageManager: storageManager,
+                router: self))
+        let progressionVC = UINavigationController(
+            rootViewController: builder.createProgressionViewController(
                 storageManager: storageManager,
                 router: self))
         let tamagochiVC = UINavigationController(
@@ -64,8 +72,11 @@ class Router: RouterProtocol {
         tabBarController?.setViewControllers([
             generate(
                 viewController: habitListVC,
-                imageString: ConstantImage.habit,
-                title: ConstantString.habit),
+                imageString: ConstantImage.home,
+                title: ConstantString.home),
+            generate(viewController: progressionVC,
+                     imageString: ConstantImage.list,
+                     title: ConstantString.progression),
             generate(
                 viewController: tamagochiVC,
                 imageString: ConstantImage.tamagochi,
