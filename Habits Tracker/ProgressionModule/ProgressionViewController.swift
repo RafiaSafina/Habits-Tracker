@@ -10,17 +10,19 @@ import UIKit
 final class ProgressionViewController: UIViewController {
     
     private let presenter: ProgressionPresenter
-    
-    private let calendarView = CalendarView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-//    private let calendarView = CalendarView()
-                                            
+               
+    private lazy var customView = CalendarView(baseDate: Date()) { date in
+        print("p")
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        calendarView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(calendarView)
+        view.addSubview(customView)
         NSLayoutConstraint.activate([
-            calendarView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            calendarView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            customView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            customView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            customView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4),
+            customView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1.0)
         ])
     }
     
@@ -32,8 +34,12 @@ final class ProgressionViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }
 //MARK: - ProgressionViewProtocol
 extension ProgressionViewController: ProgressionViewProtocol {
     
 }
+
+
+

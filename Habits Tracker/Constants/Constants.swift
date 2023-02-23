@@ -36,4 +36,6 @@ struct HabitSectionsTitles{
     static let color = "Color"
 }
 
-
+enum CalendarDataError: Error {
+    case metadataGeneration
+}
