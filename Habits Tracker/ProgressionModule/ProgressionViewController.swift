@@ -12,7 +12,7 @@ final class ProgressionViewController: UIViewController {
     private let presenter: ProgressionPresenter
                
     private lazy var customView = CalendarView(baseDate: Date()) { date in
-        print("p")
+        print(date)
     }
         
     override func viewDidLoad() {

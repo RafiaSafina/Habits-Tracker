@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C01122029B18B0400B319E2 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C01121F29B18B0400B319E2 /* CalendarHelper.swift */; };
+		6C01122329B29A2600B319E2 /* HabitNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C01122229B29A2600B319E2 /* HabitNameCell.swift */; };
+		6C01122629B2AA3A00B319E2 /* HabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C01122529B2AA3A00B319E2 /* HabitModel.swift */; };
+		6C01122A29B2DB6900B319E2 /* FrequenyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C01122929B2DB6900B319E2 /* FrequenyCell.swift */; };
+		6C01122C29B2F09300B319E2 /* ReminderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C01122B29B2F09300B319E2 /* ReminderCell.swift */; };
 		6C19B01A299F01D700B475DC /* HabitListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C19B019299F01D700B475DC /* HabitListModel.swift */; };
 		6C19B01D299F0A2B00B475DC /* ProgressionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C19B01C299F0A2B00B475DC /* ProgressionViewController.swift */; };
 		6C19B02329A021CD00B475DC /* ProgressionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C19B02229A021CD00B475DC /* ProgressionPresenter.swift */; };
@@ -30,11 +35,16 @@
 		6CE79F71299DC9E0002213C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79F70299DC9E0002213C0 /* Constants.swift */; };
 		6CE79F73299DD21F002213C0 /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79F72299DD21F002213C0 /* HabitViewController.swift */; };
 		6CE79F75299DD231002213C0 /* HabitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79F74299DD231002213C0 /* HabitPresenter.swift */; };
-		6CE79F79299DE2EE002213C0 /* Ext + TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79F78299DE2EE002213C0 /* Ext + TabBar.swift */; };
+		6CE79F79299DE2EE002213C0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79F78299DE2EE002213C0 /* Extension.swift */; };
 		6CE79F7E299E0002002213C0 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79F7D299E0002002213C0 /* HomeTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C01121F29B18B0400B319E2 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
+		6C01122229B29A2600B319E2 /* HabitNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitNameCell.swift; sourceTree = "<group>"; };
+		6C01122529B2AA3A00B319E2 /* HabitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitModel.swift; sourceTree = "<group>"; };
+		6C01122929B2DB6900B319E2 /* FrequenyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequenyCell.swift; sourceTree = "<group>"; };
+		6C01122B29B2F09300B319E2 /* ReminderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCell.swift; sourceTree = "<group>"; };
 		6C19B019299F01D700B475DC /* HabitListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListModel.swift; sourceTree = "<group>"; };
 		6C19B01C299F0A2B00B475DC /* ProgressionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionViewController.swift; sourceTree = "<group>"; };
 		6C19B02229A021CD00B475DC /* ProgressionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionPresenter.swift; sourceTree = "<group>"; };
@@ -60,7 +70,7 @@
 		6CE79F70299DC9E0002213C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6CE79F72299DD21F002213C0 /* HabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
 		6CE79F74299DD231002213C0 /* HabitPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPresenter.swift; sourceTree = "<group>"; };
-		6CE79F78299DE2EE002213C0 /* Ext + TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + TabBar.swift"; sourceTree = "<group>"; };
+		6CE79F78299DE2EE002213C0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		6CE79F7D299E0002002213C0 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +85,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C01121E29B18ACD00B319E2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6C98F2EC299D8B1D002DB234 /* AppDelegate.swift */,
+				6C98F2EE299D8B1D002DB234 /* SceneDelegate.swift */,
+				6C98F2F5299D8B1E002DB234 /* Assets.xcassets */,
+				6C98F2F7299D8B1E002DB234 /* LaunchScreen.storyboard */,
+				6C98F2FA299D8B1E002DB234 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6C01122129B18B1200B319E2 /* CalendarHelper */ = {
+			isa = PBXGroup;
+			children = (
+				6C01121F29B18B0400B319E2 /* CalendarHelper.swift */,
+			);
+			path = CalendarHelper;
+			sourceTree = "<group>";
+		};
+		6C01122429B29A8300B319E2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6C01122229B29A2600B319E2 /* HabitNameCell.swift */,
+				6C01122929B2DB6900B319E2 /* FrequenyCell.swift */,
+				6C01122B29B2F09300B319E2 /* ReminderCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		6C19B01B299F04EF00B475DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +152,8 @@
 		6C22FBCB29A6817400CC9E48 /* CalendarView */ = {
 			isa = PBXGroup;
 			children = (
+				6C22FBD229A6E5D900CC9E48 /* Models */,
+				6C01122129B18B1200B319E2 /* CalendarHelper */,
 				6C22FBCC29A6A79C00CC9E48 /* Views */,
 			);
 			path = CalendarView;
@@ -123,7 +165,6 @@
 				6C19B02529A03AE400B475DC /* CalendarView.swift */,
 				6C22FBC729A58AC700CC9E48 /* HeaderView.swift */,
 				6C22FBBF29A0666700CC9E48 /* CalendarDateCollectionViewCell.swift */,
-				6C22FBD229A6E5D900CC9E48 /* Models */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,8 +197,7 @@
 		6C98F2EB299D8B1D002DB234 /* Habits Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				6C98F2EC299D8B1D002DB234 /* AppDelegate.swift */,
-				6C98F2EE299D8B1D002DB234 /* SceneDelegate.swift */,
+				6C01121E29B18ACD00B319E2 /* App */,
 				6CE79F6C299DA8C9002213C0 /* Routing */,
 				6CE79F59299D9C57002213C0 /* HabitListModule */,
 				6CE79F5F299D9FD1002213C0 /* TamagochiModule */,
@@ -167,9 +207,6 @@
 				6CE79F6F299DB269002213C0 /* ServiceLayer */,
 				6CE79F7A299DE2F8002213C0 /* Extensions */,
 				6CE79F77299DD7FD002213C0 /* Constants */,
-				6C98F2F5299D8B1E002DB234 /* Assets.xcassets */,
-				6C98F2F7299D8B1E002DB234 /* LaunchScreen.storyboard */,
-				6C98F2FA299D8B1E002DB234 /* Info.plist */,
 			);
 			path = "Habits Tracker";
 			sourceTree = "<group>";
@@ -214,7 +251,9 @@
 			isa = PBXGroup;
 			children = (
 				6CE79F72299DD21F002213C0 /* HabitViewController.swift */,
+				6C01122429B29A8300B319E2 /* Cells */,
 				6CE79F74299DD231002213C0 /* HabitPresenter.swift */,
+				6C01122529B2AA3A00B319E2 /* HabitModel.swift */,
 			);
 			path = HabitModule;
 			sourceTree = "<group>";
@@ -230,7 +269,7 @@
 		6CE79F7A299DE2F8002213C0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6CE79F78299DE2EE002213C0 /* Ext + TabBar.swift */,
+				6CE79F78299DE2EE002213C0 /* Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -315,13 +354,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CE79F6B299DA8C1002213C0 /* Router.swift in Sources */,
+				6C01122029B18B0400B319E2 /* CalendarHelper.swift in Sources */,
 				6C98F2F1299D8B1D002DB234 /* HabitListCiewController.swift in Sources */,
+				6C01122C29B2F09300B319E2 /* ReminderCell.swift in Sources */,
 				6C98F2ED299D8B1D002DB234 /* AppDelegate.swift in Sources */,
+				6C01122A29B2DB6900B319E2 /* FrequenyCell.swift in Sources */,
 				6CE79F65299DA0C5002213C0 /* HabitListPresenter.swift in Sources */,
 				6C22FBCF29A6E30300CC9E48 /* MonthMetadataModel.swift in Sources */,
+				6C01122629B2AA3A00B319E2 /* HabitModel.swift in Sources */,
 				6C19B01D299F0A2B00B475DC /* ProgressionViewController.swift in Sources */,
 				6CE79F63299DA07D002213C0 /* HabitViewControllerCell.swift in Sources */,
-				6CE79F79299DE2EE002213C0 /* Ext + TabBar.swift in Sources */,
+				6CE79F79299DE2EE002213C0 /* Extension.swift in Sources */,
 				6CE79F5E299D9FCA002213C0 /* TamagichiViewController.swift in Sources */,
 				6C22FBC029A0666700CC9E48 /* CalendarDateCollectionViewCell.swift in Sources */,
 				6CE79F71299DC9E0002213C0 /* Constants.swift in Sources */,
@@ -335,6 +378,7 @@
 				6CE79F67299DA158002213C0 /* TamagochiPresenter.swift in Sources */,
 				6CE79F7E299E0002002213C0 /* HomeTabBarViewController.swift in Sources */,
 				6CE79F69299DA8B7002213C0 /* Builder.swift in Sources */,
+				6C01122329B29A2600B319E2 /* HabitNameCell.swift in Sources */,
 				6CE79F75299DD231002213C0 /* HabitPresenter.swift in Sources */,
 				6CE79F6E299DAED0002213C0 /* StoargeManager.swift in Sources */,
 			);
@@ -477,7 +521,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BQN7HSD4QV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Habits Tracker/Info.plist";
+				INFOPLIST_FILE = "Habits Tracker/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -508,7 +552,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BQN7HSD4QV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Habits Tracker/Info.plist";
+				INFOPLIST_FILE = "Habits Tracker/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

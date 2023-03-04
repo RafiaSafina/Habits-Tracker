@@ -13,9 +13,4 @@ struct HabitList {
     var habits: [Habit] = []
 }
 
-struct Habit {
-    var name = ""
-    var date = Date()
-    var frequency = Date()
-    var isReminded = false
-}
+
