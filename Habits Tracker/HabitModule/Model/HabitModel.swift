@@ -10,6 +10,7 @@ import Foundation
 struct Habit {
     var name = ""
     var date = Date()
-    var frequency = Date()
+    var frequency = 0
     var isReminded = false
+    var isDone = false
 }

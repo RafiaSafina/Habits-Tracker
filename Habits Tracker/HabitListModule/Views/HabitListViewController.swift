@@ -11,10 +11,13 @@ final class HabitListViewController: UITableViewController {
     
     private let presenter: HabitListPresenter
     
+    private let habits = TestingData().habits
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupNavigationBar()
+        tableView.register(HabitListCell.self, forCellReuseIdentifier: HabitListCell.reuseIdentifier)
     }
     
     init(presenter: HabitListPresenter) {
@@ -42,17 +45,10 @@ final class HabitListViewController: UITableViewController {
             style: .done,
             target: self,
             action: #selector(addNewHabit))
-        let settingsButton = UIBarButtonItem(
-            image: UIImage(named: ConstantImage.settingGear),
-            style: .plain,
-            target: self,
-            action: #selector(showSettings))
-        
+       
         navigationItem.rightBarButtonItem = addBUtton
-        navigationItem.leftBarButtonItem = settingsButton
-        
+
         addBUtton.tintColor = .red
-        settingsButton.tintColor = .red
     }
     
     @objc private func addNewHabit() {
@@ -63,6 +59,24 @@ final class HabitListViewController: UITableViewController {
         print("settings")
     }
 }
+//MARK: - UITableViewDataSource
+extension HabitListViewController {
+     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         habits.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HabitListCell.reuseIdentifier, for: indexPath) as? HabitListCell else { return UITableViewCell() }
+        let habit = habits[indexPath.row]
+        cell.configure(name: habit.name, isDone: habit.isDone)
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
+    }
+}
+
 //MARK: - HabitListViewProtocol
 extension HabitListViewController: HabitListViewProtocol {
     

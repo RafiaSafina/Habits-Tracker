@@ -14,9 +14,7 @@ class HabitViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
-        tableView.register(HabitNameCell.self, forCellReuseIdentifier: HabitNameCell.reuseIdentifier)
-        tableView.register(FrequenyCell.self, forCellReuseIdentifier: FrequenyCell.reuseIdentifier)
-        tableView.register(ReminderCell.self, forCellReuseIdentifier: ReminderCell.reuseIdentifier)
+        registerCells()
     }
     
     init(presenter: HabitPresenter) {
@@ -53,6 +51,12 @@ class HabitViewController: UITableViewController {
     
     @objc private func saveHabit() {
         print("save")
+    }
+    
+    private func registerCells() {
+        tableView.register(HabitNameCell.self, forCellReuseIdentifier: HabitNameCell.reuseIdentifier)
+        tableView.register(FrequenyCell.self, forCellReuseIdentifier: FrequenyCell.reuseIdentifier)
+        tableView.register(ReminderCell.self, forCellReuseIdentifier: ReminderCell.reuseIdentifier)
     }
 }
 

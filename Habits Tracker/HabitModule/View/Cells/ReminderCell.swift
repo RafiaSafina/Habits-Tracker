@@ -12,6 +12,7 @@ final class ReminderCell: UITableViewCell  {
     
     static let reuseIdentifier = "ReminderCellID"
     
+    private var isReminded = false 
     private let remindLabel: UILabel = {
         let label = UILabel()
         label.text = "remind me"
@@ -51,6 +52,6 @@ final class ReminderCell: UITableViewCell  {
     }
     
     @objc func toggle() {
-        print("toggle")
+        
     }
 }
